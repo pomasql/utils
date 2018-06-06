@@ -14,7 +14,7 @@ $_$
     EXECUTE v_sql;
   END;
 $_$;
-SELECT pg_c('f', 'search_path_set', 'установить переменную search_path');
+--SELECT pg_c('f', 'search_path_set', 'установить переменную search_path');
 
 -- ----------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION lang_set(a_lang TEXT DEFAULT NULL) RETURNS TEXT LANGUAGE 'plpgsql' AS
@@ -36,4 +36,4 @@ $_$
     RETURN v_path_old;
   END;
 $_$;
-SELECT pg_c('f', 'lang_set', 'установить локаль и вернуть search_path до изменения');
+--SELECT pg_c('f', 'lang_set', 'установить локаль и вернуть search_path до изменения');

@@ -1,22 +1,21 @@
-# utils:90_exception
-
-## test_exception
+#  utils/90_exception
+## utils/90_exception
 
 ```sql
 SELECT utils.exception_test('select now();')
 ;
 ```
- exception_test 
-----------------
- 
+|exception_test 
+|---------------
+|
 
-## test_without_exception
+## utils/90_exception
 
 ```sql
 SELECT utils.exception_test('select no();')
 ;
 ```
-                     exception_test                      
----------------------------------------------------------
- SQLSTATE: 42883 EXCEPTION: function no() does not exist
+|                    exception_test                      
+|--------------------------------------------------------
+|SQLSTATE: 42883 EXCEPTION: function no() does not exist
 

@@ -22,4 +22,4 @@ $_$
       $1
     END
 $_$;
-SELECT pg_c('f', 'type_name_normalize', 'нормализует название типа');
+--SELECT pg_c('f', 'type_name_normalize', 'нормализует название типа');

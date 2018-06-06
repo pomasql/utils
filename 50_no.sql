@@ -33,7 +33,7 @@ $_$
     OR (split_part($1, '.', 2) <> '' AND table_schema = split_part($1, '.', 1) AND table_name = split_part($1, '.', 2)  )
   )
 $_$;
-SELECT pg_c('f', 'no_table', 'Проверка отсутствия таблицы');
+--SELECT pg_c('f', 'no_table', 'Проверка отсутствия таблицы');
 
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION no_sequence(name) RETURNS BOOL LANGUAGE 'sql' AS
