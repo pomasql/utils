@@ -510,7 +510,6 @@ SELECT
 , pg_c('d', 'd_pg_argtypes',            'список OID-ов')
 , pg_c('d', 'd_pg_argnames',            'список аргументов')
 , pg_c('t', 't_pg_object',              'типы объектов')
-, pg_c('t', 't_pkg_op',                 'стадии')
 , pg_c('t', 't_pg_proc_info',           'информация о функции')
 , pg_c('t', 't_pg_view_info',           'информация о представлении')
 ;

@@ -12,7 +12,6 @@ CREATE DOMAIN d_pg_argnames AS TEXT[];    -- pg_catalog.pg_proc.proargnames
 
 /* ------------------------------------------------------------------------- */
 CREATE TYPE t_pg_object AS ENUM ('h', 'r', 'v', 'c', 't', 'd', 'f', 'a', 's'); -- see pg_comment
-CREATE TYPE t_pkg_op AS ENUM ('create', 'make', 'drop', 'erase', 'done'); -- see 50_pkg.sql
 
 /* ------------------------------------------------------------------------- */
 CREATE TYPE t_pg_proc_info AS (
