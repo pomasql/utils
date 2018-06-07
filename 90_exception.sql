@@ -10,10 +10,10 @@
 
 /* ------------------------------------------------------------------------- */
 -- тест с исключением
-SELECT test('test_exception'); -- BOT
-SELECT :SCH.exception_test('select now();');--EOT
+SELECT poma.test('test_exception'); -- BOT
+SELECT :PKG.exception_test('select now();');--EOT
 
-SELECT test('test_without_exception'); -- BOT
-SELECT :SCH.exception_test('select no();');--EOT
+SELECT poma.test('test_without_exception'); -- BOT
+SELECT :PKG.exception_test('select no();');--EOT
 
 /* ------------------------------------------------------------------------- */

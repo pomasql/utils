@@ -4,4 +4,4 @@
 */
 \r
 
-SELECT * FROM :SCH.epoch2timestamp(:STAMP); -- EOT
+SELECT * FROM :PKG.epoch2timestamp(:STAMP); -- EOT
