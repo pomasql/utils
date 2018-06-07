@@ -39,7 +39,7 @@ CREATE OR REPLACE VIEW pg_db_size AS
       END DESC -- nulls first
     LIMIT 20
 ;
-/* Код закоментирован пока отсутствует модуль pg_buffercache
+/*
 -- https://www.keithf4.com/a-large-database-does-not-mean-large-shared_buffers/
 CREATE OR REPLACE VIEW pg_cached_size AS
   SELECT
