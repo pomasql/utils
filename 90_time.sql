@@ -6,12 +6,12 @@
 
 /* ------------------------------------------------------------------------- */
 
-SELECT test(:'TEST'); -- BOT
+SELECT poma.test(:'TEST'); -- BOT
 
 /* ------------------------------------------------------------------------- */
 -- пример теста с макросом
 
-\set FILE :TEST .macro.sql
+\set FILE :BUILD_DIR :TEST .macro.sql
 
 \set STAMP 1
 \i :FILE
