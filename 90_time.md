@@ -13,7 +13,7 @@ SELECT * FROM utils.epoch2timestamp(1)
 SELECT * FROM utils.epoch2timestamp(1000)
 ;
 ```
-   epoch2timestamp   
----------------------
- 1970-01-01 00:16:40
+|  epoch2timestamp   
+|--------------------
+|1970-01-01 00:16:40
 
