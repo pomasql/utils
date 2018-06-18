@@ -16,4 +16,4 @@ $_$
       RETURN SQLSTATE;
   END;
 $_$;
-SELECT pg_c('f', 'pg_cast', 'Приведение значения к заданному типу');
+SELECT poma.pg_c('f', 'pg_cast', 'Приведение значения к заданному типу');

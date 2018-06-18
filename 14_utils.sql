@@ -13,7 +13,7 @@ $_$
   -- b: элемент
 SELECT array_agg(x) FROM unnest($1) x WHERE x <> $2;
 $_$;
-SELECT pg_c('f', 'array_remove', 'удаляет элемент из массива', 'Используется в pkg_op_after');
+SELECT poma.pg_c('f', 'array_remove', 'удаляет элемент из массива', 'Используется в pkg_op_after');
 
 
 
@@ -28,7 +28,7 @@ $_$
     RETURN v;
   END;
 $_$;
-SELECT pg_c('f', 'pg_exec_func', 'Вернуть текстовый результат функции, вызвав ее по имени', 'Используется VIEW pg_const');
+SELECT poma.pg_c('f', 'pg_exec_func', 'Вернуть текстовый результат функции, вызвав ее по имени', 'Используется VIEW pg_const');
 
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION pg_exec_func(
@@ -40,7 +40,7 @@ $_$
   -- a_name:   имя функции
   SELECT utils.pg_exec_func($1 || '.' || $2)
 $_$;
-SELECT pg_c('f', 'pg_exec_func', 'Вернуть текстовый результат функции, вызвав ее по имени', 'Используется VIEW pg_const');
+SELECT poma.pg_c('f', 'pg_exec_func', 'Вернуть текстовый результат функции, вызвав ее по имени', 'Используется VIEW pg_const');
 
 
 
@@ -50,7 +50,7 @@ $_$
   -- a_oid:  OID
   SELECT nspname::TEXT FROM pg_namespace WHERE oid = $1
 $_$;
-SELECT pg_c('f', 'pg_schema_by_oid',         'получить название пакета по OID-у', 'Используется VIEW pg_const');
+SELECT poma.pg_c('f', 'pg_schema_by_oid',         'получить название пакета по OID-у', 'Используется VIEW pg_const');
 
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION pg_comment (
@@ -96,11 +96,11 @@ BEGIN
 END
 
 $_$;
-SELECT pg_c('f', 'pg_comment', 'чтение/запись комментариев полей таблицы');
+SELECT poma.pg_c('f', 'pg_comment', 'чтение/запись комментариев полей таблицы');
 
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION now0() RETURNS TIMESTAMPTZ(0) STABLE LANGUAGE 'sql' AS
 $_$
 SELECT now()::TIMESTAMPTZ(0);
 $_$;
-SELECT pg_c('f', 'now0', 'текущее время, округленное до секунды', 'См РМ #31126');
+SELECT poma.pg_c('f', 'now0', 'текущее время, округленное до секунды', 'См РМ #31126');

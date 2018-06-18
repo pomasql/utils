@@ -13,5 +13,5 @@ BEGIN
   EXCEPTION WHEN OTHERS THEN RETURN 'SQLSTATE: ' || SQLSTATE || ' EXCEPTION: ' || SQLERRM;
 END;
 $_$;
-SELECT pg_c('f', 'exception_test', 'протестировать sql код на исключения');
+SELECT poma.pg_c('f', 'exception_test', 'протестировать sql код на исключения');
 -- ----------------------------------------------------------------------------
