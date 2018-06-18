@@ -15,8 +15,6 @@ SELECT array_agg(x) FROM unnest($1) x WHERE x <> $2;
 $_$;
 SELECT poma.pg_c('f', 'array_remove', 'удаляет элемент из массива', 'Используется в pkg_op_after');
 
-
-
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION pg_exec_func(a_name TEXT) RETURNS TEXT STABLE LANGUAGE 'plpgsql' AS
 $_$
@@ -41,8 +39,6 @@ $_$
   SELECT utils.pg_exec_func($1 || '.' || $2)
 $_$;
 SELECT poma.pg_c('f', 'pg_exec_func', 'Вернуть текстовый результат функции, вызвав ее по имени', 'Используется VIEW pg_const');
-
-
 
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION pg_schema_by_oid(a_oid oid) RETURNS TEXT STABLE LANGUAGE 'sql' AS
