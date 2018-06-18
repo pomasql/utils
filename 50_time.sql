@@ -7,5 +7,5 @@ SELECT CASE
   ELSE (TIMESTAMP 'epoch' + $1 * INTERVAL '1 second')::timestamp
 END;
 $_$;
-SELECT pg_c('f', 'epoch2timestamp', 'преобразование секунд к типу TIMESTAMP');
+SELECT poma.pg_c('f', 'epoch2timestamp', 'преобразование секунд к типу TIMESTAMP');
 
