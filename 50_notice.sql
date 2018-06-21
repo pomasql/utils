@@ -19,11 +19,11 @@ $_$
      END CASE;
   END;
 $_$;
-SELECT poma.pg_c('f', 'raise', 'Вызов RAISE из SQL запросов', $_$/*
+SELECT poma.comment('f', 'raise', 'Вызов RAISE из SQL запросов. 
 Метод позволяет вызывать RAISE из SQL-запросов и скриптов psql.
 В отличие от прямого вызова, при таком выводится контекст 
 (см. http://dba.stackexchange.com/questions/7214/generate-an-exception-with-a-context)
-*/$_$);
+');
 
 /* ------------------------------------------------------------------------- */
 CREATE OR REPLACE FUNCTION notice (a_text TEXT) RETURNS VOID LANGUAGE 'sql' AS
@@ -31,8 +31,8 @@ $_$
   -- a_text: сообщение
   SELECT utils.raise('NOTICE', $1);
 $_$ ;
-SELECT poma.pg_c('f', 'notice', 'Вывод предупреждения посредством RAISE NOTICE', $_$/*
+SELECT poma.comment('f', 'notice', 'Вывод предупреждения посредством RAISE NOTICE.
 Метод позволяет вызывать NOTICE из SQL-запросов и скриптов psql.
 Кроме прочего, используется в скриптах 9?_*.sql для передачи в pgctl.sh названия теста
-*/$_$);
+');
 

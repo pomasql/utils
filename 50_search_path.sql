@@ -14,7 +14,7 @@ $_$
     EXECUTE v_sql;
   END;
 $_$;
-SELECT poma.pg_c('f', 'search_path_set', 'установить переменную search_path');
+SELECT poma.comment('f', 'search_path_set', 'Установить переменную search_path');
 
 -- ----------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION lang_set(a_lang TEXT DEFAULT NULL) RETURNS TEXT LANGUAGE 'plpgsql' AS
@@ -36,4 +36,4 @@ $_$
     RETURN v_path_old;
   END;
 $_$;
-SELECT poma.pg_c('f', 'lang_set', 'установить локаль и вернуть search_path до изменения');
+SELECT poma.comment('f', 'lang_set', 'Установить локаль и вернуть search_path до изменения');
