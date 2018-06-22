@@ -22,4 +22,4 @@ $_$
       $1
     END
 $_$;
-SELECT poma.pg_c('f', 'type_name_normalize', 'нормализует название типа');
+SELECT poma.comment('f', 'type_name_normalize', 'Нормализует название типа');
