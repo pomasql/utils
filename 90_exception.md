@@ -1,5 +1,5 @@
 #  utils/90_exception
-## utils/90_exception
+## test_exception
 
 ```sql
 SELECT utils.exception_test('select now();')
@@ -9,7 +9,7 @@ SELECT utils.exception_test('select now();')
 |---------------
 |
 
-## utils/90_exception
+## test_without_exception
 
 ```sql
 SELECT utils.exception_test('select no();')
